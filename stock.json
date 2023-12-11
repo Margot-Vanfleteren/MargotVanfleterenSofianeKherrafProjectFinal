@@ -1,0 +1,22 @@
+{
+    "stock": [
+        {
+            "StyleName": "The Fashionable Pink",
+            "Crocs": true,
+            "FlipFlops": true,
+            "Socks": false
+        },
+        {
+            "StyleName": "The Classic Black",
+            "Crocs": false,
+            "FlipFlops": true,
+            "Socks": false
+        },
+        {
+            "StyleName": "The Electric Blue",
+            "Crocs": true,
+            "FlipFlops": true,
+            "Socks": true
+        }
+    ]
+}

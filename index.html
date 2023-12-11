@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feet Lovers Shop</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+
+    <h1>Feet Lovers Shop</h1>
+    
+    <div id="app">
+
+
+        <div id="basket">
+            <h2>Total</h2>
+            <p>{{total}}€</p>
+        </div>
+
+        <!-- Switch colors  -->
+        <button :class="{ 'instock': stock, 'nostock': !stock }" @click="addValue">{{ stock ? 'BUY' : 'No stock' }}</button>
+        <button id="next" @click="nextColor">-></button>
+        <button id="prev" @click="prevColor"><-</button>
+
+
+        <!-- Switch article -->
+        <div id="navbar">
+            <div :class="{ 'switch': true, 'active-switch': currentSection === 'Crocs' }" style="border-radius: 50px 50px 50px 50px;" @click="switchSection('Crocs')">Crocs</div>
+            <div :class="{ 'switch': true, 'active-switch': currentSection === 'FlipFlops' }" style="border-radius: 50px 50px 50px 50px;" @click="switchSection('FlipFlops')">FlipFlops</div>
+            <div :class="{ 'switch': true, 'active-switch': currentSection === 'Socks' }" style="border-radius: 50px 50px 50px 50px;" @click="switchSection('Socks')">Socks</div>
+        </div>
+        
+        <!-- Crocs part -->
+        <div class="part" id="Crocs" v-show="currentSection === 'Crocs'" :key="ArticleIndex">
+            <!-- Check for nullability before accessing the property -->
+            <h2>{{ ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].StyleName : '' }}</h2>
+            <img :src="ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].Crocs.image : ''" alt="Crocs Image">
+            <h3>{{ ShoeCollection.length > 0 ? `$${ShoeCollection[ArticleIndex].Crocs.price.toFixed(2)}` : '' }}</h3>
+            <button :class="{ 'instock': stock, 'nostock': !stock }" @click="addValue">{{ stock ? 'BUY' : 'No stock' }}</button>
+        </div>
+        
+
+        <!--FlipFlops part -->
+        <div class="part" id="FlipFlops" v-show="currentSection === 'FlipFlops'" key="FlipFlops">
+            
+            <h2>{{ ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].StyleName : '' }}</h2>
+            <img :src="ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].FlipFlops.image : ''" alt="FlipFlops Image">
+            <h3>{{ ShoeCollection.length > 0 ? `$${ShoeCollection[ArticleIndex].FlipFlops.price.toFixed(2)}` : '' }}</h3>
+           
+        </div>
+
+        <!--Socks part -->
+        <div class="part" id="Socks" v-show="currentSection === 'Socks'" key="Socks">
+            
+            <h2>{{ ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].StyleName : '' }}</h2>
+            <img :src="ShoeCollection.length > 0 ? ShoeCollection[ArticleIndex].Socks.image : ''" alt="Socks Image">
+            <h3>{{ ShoeCollection.length > 0 ? `$${ShoeCollection[ArticleIndex].Socks.price.toFixed(2)}` : '' }}</h3>
+           
+        </div>
+
+        <!-- Feedback part -->
+        <footer>
+            <form id="feedBack">
+                <label for="Name">Name</label>
+                <input type="Name" v-model="Name">
+                
+                <label for="Comment">Feedback:</label>
+                <textarea id="Comment" v-model="Comment"></textarea>
+                <button id="add" type="button" @click="submitFeedback">Send Feedback</button>
+            </form>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
+
+        
+        
+
+        
+
+      

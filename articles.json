@@ -1,0 +1,50 @@
+{
+    "FeetCollection" : [
+     {
+    "StyleName" :"The Fashionable Pink",
+    "Crocs" : {
+        "image": "https://photos6.spartoo.nl/photos/188/18864962/18864962_500_A.jpg",
+        "price": 29.99
+    },
+    "FlipFlops": {
+        "image": "https://thesecretwardrobe.org/wp-content/uploads/2022/03/anatomic_colors_bright_pink_82591_20791_00_hd.jpg",
+        "price": 19.99
+    },
+    "Socks": {
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyelUC6j3LY9KNhURxMkK1gbsOUcLq9BOcmg&usqp=CAU",
+        "price" : 9.99
+    }
+},
+{
+    "StyleName" :"The Classic Black",
+    "Crocs" : {
+        "image": "https://images.journeys.com/images/products/1_532153_FS_ALT5.JPG",
+        "price": 29.99
+    },
+    "FlipFlops": {
+        "image": "https://indosole.com/cdn/shop/products/MSAFLPESBLABLA_1.jpg?v=1628831170",
+        "price": 19.99
+    },
+    "Socks": {
+        "image": "https://www.dim.com/dw/image/v2/AARR_PRD/on/demandware.static/-/Sites-dim-master/default/dwf1016308/D024VM2-0HZ_01.jpg?sw=600&sh=600&sm=fit",
+        "price" : 9.99
+    }
+},
+{
+    "StyleName" :"The Electric Blue",
+    "Crocs" : {
+        "image": "https://images.asos-media.com/products/crocs-klassieke-crocs-in-blauw/202624344-1-blue?$n_750w$&wid=750&hei=750&fit=crop",
+        "price": 29.99
+    },
+    "FlipFlops": {
+        "image": "https://assets.hermes.com/is/image/hermesproduct/egerie-sandal--221001Z%20BO-worn-1-0-0-1000-1000_g.jpg",
+        "price": 19.99
+    },
+    "Socks": {
+        "image": "https://www.coffeetiesandco.com/cdn/shop/products/IMG_8531.jpg?v=1603713065",
+        "price" : 9.99
+    }
+}
+    ]
+
+}
